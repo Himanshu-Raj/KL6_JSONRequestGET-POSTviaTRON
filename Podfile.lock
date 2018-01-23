@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (4.5.0)
+  - SwiftyJSON (3.1.4)
+  - TRON (3.0.3):
+    - Alamofire (~> 4.1)
+    - TRON/SwiftyJSON (= 3.0.3)
+  - TRON/Core (3.0.3):
+    - Alamofire (~> 4.1)
+  - TRON/SwiftyJSON (3.0.3):
+    - Alamofire (~> 4.1)
+    - SwiftyJSON (~> 3.1)
+    - TRON/Core
+
+DEPENDENCIES:
+  - TRON
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  TRON: dd43f2d37b70ae245e5fef4a52f1ab8a5eaac3a5
+
+PODFILE CHECKSUM: 8683adb32349b3977e4a2ca805039b34c11d1de4
+
+COCOAPODS: 1.2.1

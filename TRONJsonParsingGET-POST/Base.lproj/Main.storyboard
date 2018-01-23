@@ -25,6 +25,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ezI-Fs-psf">
                                 <rect key="frame" x="0.0" y="20" width="320" height="464"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="EwA-0p-LO5"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="dZG-MS-hRb"/>
+                                </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fCz-rR-mEI">
                                 <rect key="frame" x="56" y="487" width="208" height="69"/>
@@ -36,6 +40,9 @@
                                         <state key="normal" title="GET">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="getRequestMade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y56-OD-RF5"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOU-f1-WNa">
                                         <rect key="frame" x="0.0" y="37" width="208" height="32"/>
@@ -44,6 +51,9 @@
                                         <state key="normal" title="POST">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="postRequestMade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wnd-S9-zgs"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -55,11 +65,15 @@
                             <constraint firstItem="ezI-Fs-psf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OL8-y3-Klg"/>
                             <constraint firstItem="fCz-rR-mEI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="P4s-jD-ybT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fCz-rR-mEI" secondAttribute="trailing" constant="40" id="UJP-ev-h9w"/>
+                            <constraint firstItem="ezI-Fs-psf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wbz-0z-xQA"/>
                             <constraint firstItem="ezI-Fs-psf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="h6A-NN-nJ5"/>
                             <constraint firstItem="fCz-rR-mEI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ib2-4U-iFW"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fCz-rR-mEI" secondAttribute="bottom" constant="12" id="wyk-5h-1gd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="ezI-Fs-psf" id="VHJ-dY-fnE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
